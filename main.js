@@ -348,3 +348,137 @@ if (navBtn && header && siteNav && backdrop) {
     }, 450);
   });
 })();
+
+/* =========================
+   4) FAQ Accordion + Scroll Reveal
+   - Only one item open at a time
+   - Smooth height animation
+   - Chevron rotation
+   - Scroll reveal when entering viewport
+   - Keyboard accessible
+========================= */
+(function initFAQ() {
+  const faqSection = document.getElementById("faq");
+  const faqList = document.getElementById("faqList");
+  if (!faqSection || !faqList) return;
+
+  const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Accordion Logic
+  function closeItem(button) {
+    if (!button) return;
+    const answer = document.getElementById(button.getAttribute("aria-controls"));
+    if (!answer) return;
+
+    button.setAttribute("aria-expanded", "false");
+    answer.setAttribute("hidden", "");
+
+    if (!reduceMotion) {
+      answer.style.height = answer.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        answer.style.height = "0px";
+      });
+    } else {
+      answer.style.height = "0px";
+    }
+  }
+
+  function openItem(button) {
+    if (!button) return;
+    const answer = document.getElementById(button.getAttribute("aria-controls"));
+    if (!answer) return;
+
+    button.setAttribute("aria-expanded", "true");
+    answer.removeAttribute("hidden");
+
+    if (!reduceMotion) {
+      const contentHeight = answer.querySelector(".faq__answer-content").scrollHeight;
+      answer.style.height = "0px";
+      requestAnimationFrame(() => {
+        answer.style.height = contentHeight + "px";
+      });
+
+      const removeHeightAfterTransition = () => {
+        answer.style.height = "auto";
+        answer.removeEventListener("transitionend", removeHeightAfterTransition);
+      };
+      answer.addEventListener("transitionend", removeHeightAfterTransition);
+    } else {
+      answer.style.height = "auto";
+    }
+  }
+
+  function toggleItem(button) {
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
+    const allButtons = faqList.querySelectorAll(".faq__question");
+
+    if (isExpanded) {
+      closeItem(button);
+    } else {
+      allButtons.forEach((btn) => {
+        if (btn !== button && btn.getAttribute("aria-expanded") === "true") {
+          closeItem(btn);
+        }
+      });
+      openItem(button);
+    }
+  }
+
+  // Event delegation for accordion
+  faqList.addEventListener("click", (e) => {
+    const button = e.target.closest(".faq__question");
+    if (button) {
+      e.preventDefault();
+      toggleItem(button);
+    }
+  });
+
+  // Keyboard support (Enter and Space)
+  faqList.addEventListener("keydown", (e) => {
+    const button = e.target.closest(".faq__question");
+    if (button && (e.key === "Enter" || e.key === " ")) {
+      e.preventDefault();
+      toggleItem(button);
+    }
+  });
+
+  // Scroll Reveal Animation
+  if (reduceMotion) {
+    faqSection.classList.add("faq--reveal");
+    return;
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    faqSection.classList.add("faq--reveal");
+    return;
+  }
+
+  let revealed = false;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting && !revealed) {
+          revealed = true;
+          faqSection.classList.add("faq--reveal");
+          observer.disconnect();
+          break;
+        }
+      }
+    },
+    { threshold: 0.15 }
+  );
+
+  observer.observe(faqSection);
+
+  // Hash navigation support (direct link to #faq)
+  function handleFaqHash() {
+    if (window.location.hash === "#faq" && !revealed) {
+      revealed = true;
+      faqSection.classList.add("faq--reveal");
+    }
+  }
+
+  window.addEventListener("hashchange", handleFaqHash);
+  handleFaqHash();
+})();
