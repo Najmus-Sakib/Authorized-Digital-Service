@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#14B8A6" />
+  <title>Authorized Digital Service — Premium Digital Accounts</title>
+  <meta name="description" content="Premium subscriptions and digital services with fast delivery, secure process, and 24/7 WhatsApp support." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Announcement Bar (micro-animation only via CSS; no layout changes) -->
+  <div class="announce" role="region" aria-label="Limited time offer">
+    <div class="container announce__inner">
+      <span class="announce__badge">
+        <span class="announce__dot" aria-hidden="true"></span>
+        Limited Time
+      </span>
+      <p class="announce__text">
+        December Special Offer — Save more on <strong>APEUni</strong> & <strong>Alfa PTE</strong> premium access.
+      </p>
+      <a class="announce__cta" href="#combos">View Deals</a>
+    </div>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="header" id="siteHeader">
+    <div class="container header__inner">
+      <a class="brand" href="#home" aria-label="Authorized Digital Service Home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__name">Authorized Digital Service</span>
+      </a>
+
+      <button class="navbtn" id="navBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav">
+        <span class="navbtn__bar"></span>
+        <span class="navbtn__bar"></span>
+        <span class="navbtn__bar"></span>
+      </button>
+
+      <nav class="nav" id="siteNav" aria-label="Primary navigation">
+        <a class="nav__link" href="#home">Home</a>
+        <a class="nav__link" href="#products">Products</a>
+        <a class="nav__link" href="#combos">Combo Offers</a>
+        <a class="nav__link" href="#reviews">Reviews</a>
+        <a class="nav__link" href="#contact">Contact</a>
+
+        <!-- single Order Now -->
+        <a class="btn btn--primary nav__order" href="#" data-wa="Hi! I want to place an order.">Order Now</a>
+      </nav>
+    </div>
+
+    <div class="backdrop" id="navBackdrop" aria-hidden="true"></div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="hero">
+    <div class="container hero__grid">
+      <section class="hero__content" aria-label="Homepage hero">
+        <div class="chip">
+          <span class="chip__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+              <path d="M12 2l7 4v6c0 5-3.2 9.4-7 10-3.8-.6-7-5-7-10V6l7-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M9.5 12l1.8 1.8L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          Trusted premium access • Fast delivery • Friendly support
+        </div>
+
+        <h1 class="hero__title">
+          Premium Digital Accounts,
+          <span class="hero__titleAccent">Trusted</span> & <span class="hero__titleAccent">Affordable</span>
+        </h1>
+
+        <p class="hero__subtitle">
+          Get access to APEUni, Alfa PTE, TestGlider, and more with a secure process and quick WhatsApp support.
+        </p>
+
+        <!-- Hero CTA row (alignment reference) -->
+        <div class="hero__actions" id="heroActions">
+          <a class="btn btn--primary" href="#" data-wa="Hi! I want to get started now.">Get Started Now</a>
+          <a class="btn btn--soft" href="#products">See Products</a>
+        </div>
+
+        <div class="trust" aria-label="Trust indicators">
+          <div class="trust__card">
+            <span class="trust__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M3 7h11v9H3V7z" stroke="currentColor" stroke-width="2" />
+                <path d="M14 10h4l3 3v3h-7v-6z" stroke="currentColor" stroke-width="2" />
+                <path d="M7 18a1.5 1.5 0 1 0 0.001 0z" stroke="currentColor" stroke-width="2"/>
+                <path d="M18 18a1.5 1.5 0 1 0 0.001 0z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </span>
+            <div>
+              <div class="trust__title">Fast Delivery</div>
+              <div class="trust__text">Quick confirmation & setup</div>
+            </div>
+          </div>
+
+          <div class="trust__card">
+            <span class="trust__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M7 11V8a5 5 0 0 1 10 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M6 11h12v10H6V11z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M12 15v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <div>
+              <div class="trust__title">Secure Process</div>
+              <div class="trust__text">Clear steps & support</div>
+            </div>
+          </div>
+
+          <div class="trust__card">
+            <span class="trust__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M4 12a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M4 12v6a2 2 0 0 0 2 2h2v-7H6a2 2 0 0 0-2 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M20 12v6a2 2 0 0 1-2 2h-2v-7h2a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <div>
+              <div class="trust__title">24/7 Support</div>
+              <div class="trust__text">WhatsApp help anytime</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Combo card (will be vertically aligned to CTA row via minimal JS) -->
+      <aside class="heroCard" id="comboCard" aria-label="Quick order card">
+        <div class="heroCard__top">
+          <span class="pill">Most Popular</span>
+          <h2 class="heroCard__title">Combo Savings</h2>
+          <p class="heroCard__sub">Get more value with bundle offers.</p>
+        </div>
+
+        <div class="heroCard__deals">
+          <div class="deal">
+            <div class="deal__name">APEUni + Alfa PTE</div>
+            <div class="deal__meta">3 Months • <strong>3000 BDT</strong></div>
+          </div>
+          <div class="deal">
+            <div class="deal__name">APEUni + Alfa + TestGlider</div>
+            <div class="deal__meta">3 Months • <strong>3500 BDT</strong></div>
+          </div>
+        </div>
+
+        <a class="btn btn--primary btn--block heroCard__cta" href="#" data-wa="Hi! I want the best combo offer.">Order via WhatsApp</a>
+        <p class="heroCard__note">No hidden charges • Friendly support</p>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Products -->
+  <section id="products" class="section">
+    <div class="container">
+      <header class="section__head">
+        <h2 class="section__title">Products & Pricing</h2>
+        <p class="section__subtitle">Simple plans, clear pricing, and quick delivery.</p>
+      </header>
+
+      <div class="grid grid--3">
+        <!-- Existing products (unchanged) -->
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">APEUni VIP</h3>
+            <p class="card__desc">Complete PTE preparation platform.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>1 Month</span><span class="price__new">999 TK</span></div>
+            <div class="price__row"><span>2 Months</span><span class="price__new">1499 TK</span></div>
+            <div class="price__row"><span>3 Months</span><span class="price__new">1999 TK</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want APEUni VIP.">Order APEUni</a>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">Alfa PTE</h3>
+            <p class="card__desc">Mock tests & study materials.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>1 Month</span><span class="price__new">999 TK</span></div>
+            <div class="price__row"><span>2 Months</span><span class="price__new">1499 TK</span></div>
+            <div class="price__row"><span>3 Months</span><span class="price__new">1999 TK</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want Alfa PTE.">Order Alfa PTE</a>
+        </article>
+
+
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">Alfa PTE</h3>
+            <p class="card__desc">Mock tests & study materials.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>1 Month</span><span class="price__new">999 TK</span></div>
+            <div class="price__row"><span>2 Months</span><span class="price__new">1499 TK</span></div>
+            <div class="price__row"><span>3 Months</span><span class="price__new">1999 TK</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want Alfa PTE.">Order Alfa PTE</a>
+        </article>
+
+
+
+
+
+
+        
+
+
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">TestGlider PTE</h3>
+            <p class="card__desc">Smart mock tests for PTE success. Real-time score insights & progress.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>6 Months</span><span class="price__new">1500 TK</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want LinkedIn Premium. Please share price and details.">Order Now</a>
+        </article>
+
+
+        <!-- Added products (unchanged from previous) -->
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">LinkedIn Premium</h3>
+            <p class="card__desc">Career tools and premium insights for professional growth.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>Price</span><span class="price__new">Contact for price</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want LinkedIn Premium. Please share price and details.">Order Now</a>
+        </article>
+
+
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">Netflix</h3>
+            <p class="card__desc">Unlimited movies & series, anytime. HD/4K streaming on any device.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>Price</span><span class="price__new">Contact for price</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want Netflix. Please share available plans and price.">Order Now</a>
+        </article>
+
+        
+
+        <article class="card card--soft">
+          <div class="card__head">
+            <h3 class="card__title">Any Paid VPN</h3>
+            <p class="card__desc">Secure browsing with stable speed and privacy protection.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>Price</span><span class="price__new">Contact for price</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want a paid VPN. Please suggest options and price.">Order Now</a>
+        </article>
+
+    
+
+        <article class="card card--soft">
+          <div class="card__head">
+            <h3 class="card__title">YouTube Premium</h3>
+            <p class="card__desc">Ad-free viewing with background play and music benefits.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>Price</span><span class="price__new">Contact for price</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want YouTube Premium. Please share price and duration options.">Order Now</a>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">RDP / VPS</h3>
+            <p class="card__desc">Reliable remote server access for work and productivity.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>Price</span><span class="price__new">Contact for price</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want RDP/VPS. Please share specs and price options.">Order Now</a>
+        </article>
+
+        <article class="card card--soft">
+          <div class="card__head">
+            <h3 class="card__title">CapCut Pro</h3>
+            <p class="card__desc">Pro tools for smooth, fast editing.
+Perfect for reels & short videos.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>Price</span><span class="price__new">Contact for price</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want CapCut Pro. Please share price and duration.">Order Now</a>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">Zoom Paid</h3>
+            <p class="card__desc">Long meetings with premium controls and better reliability.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>Price</span><span class="price__new">Contact for price</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want Zoom paid plan. Please share options and price.">Order Now</a>
+        </article>
+
+        <article class="card card--soft">
+          <div class="card__head">
+            <h3 class="card__title">Grammarly</h3>
+            <p class="card__desc">Premium writing help for clarity, tone, and correctness.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>Price</span><span class="price__new">Contact for price</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want Grammarly Premium. Please share price and duration.">Order Now</a>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">Spotify Premium</h3>
+            <p class="card__desc">Ad-free music with offline listening on supported devices.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>Price</span><span class="price__new">Contact for price</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want Spotify Premium. Please share price and duration.">Order Now</a>
+        </article>
+
+        <article class="card card--soft">
+          <div class="card__head">
+            <h3 class="card__title">ChatGPT Premium</h3>
+            <p class="card__desc">Premium access for priority usage and faster responses.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>Price</span><span class="price__new">Contact for price</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want ChatGPT Premium. Please share price and process.">Order Now</a>
+        </article>
+
+        <article class="card">
+          <div class="card__head">
+            <h3 class="card__title">Skillshare</h3>
+            <p class="card__desc">Premium learning access for skills, design, and business.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>Price</span><span class="price__new">Contact for price</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want Skillshare. Please share available plans and price.">Order Now</a>
+        </article>
+
+        <article class="card card--soft">
+          <div class="card__head">
+            <h3 class="card__title">Amazon Premium</h3>
+            <p class="card__desc">Premium membership benefits based on plan availability.</p>
+          </div>
+          <div class="price">
+            <div class="price__row"><span>Price</span><span class="price__new">Contact for price</span></div>
+          </div>
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want Amazon Premium/Prime. Please share availability and price.">Order Now</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Combo Offers -->
+  <section id="combos" class="section section--alt">
+    <div class="container">
+      <header class="section__head">
+        <h2 class="section__title">Combo Offers</h2>
+        <p class="section__subtitle">Save more with bundles — balanced design, calm & premium.</p>
+      </header>
+
+      <div class="grid grid--2 combos">
+        <article class="card combo">
+          <div class="combo__badge combo__badge--best">Best Deal</div>
+          <h3 class="combo__title">APEUni + Alfa PTE</h3>
+          <p class="combo__desc">Full prep combo for consistent practice.</p>
+
+          <div class="combo__price">
+            <span class="combo__amount">3000</span><span class="combo__currency">TK</span>
+            <span class="combo__meta">/ 3 Months</span>
+          </div>
+
+          <ul class="list">
+            <li>APEUni VIP access</li>
+            <li>Alfa PTE access</li>
+            <li>Fast delivery</li>
+            <li>WhatsApp support</li>
+          </ul>
+
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want Combo: APEUni + Alfa PTE (3 months - 3000 TK).">Get This Combo</a>
+        </article>
+
+        <article class="card combo combo--featured">
+          <div class="combo__badge combo__badge--popular">Popular</div>
+          <h3 class="combo__title">APEUni + Alfa + TestGlider</h3>
+          <p class="combo__desc">Best value bundle for higher results.</p>
+
+          <div class="combo__price">
+            <span class="combo__amount">3500</span><span class="combo__currency">TK</span>
+            <span class="combo__meta">/ 3 Months</span>
+          </div>
+
+          <ul class="list">
+            <li>APEUni VIP access</li>
+            <li>Alfa PTE access</li>
+            <li>TestGlider access</li>
+            <li>Priority support</li>
+          </ul>
+
+          <a class="btn btn--primary btn--block" href="#" data-wa="Hi! I want Combo: APEUni + Alfa + TestGlider (3 months - 3500 TK).">Get This Combo</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews (auto-loop + drag) -->
+  <section id="reviews" class="section">
+    <div class="container">
+      <header class="section__head">
+        <h2 class="section__title">Customer Reviews</h2>
+        <p class="section__subtitle">Smooth auto-scroll • hover to pause • swipe on mobile</p>
+      </header>
+
+      <div class="reviewsSlider" id="reviewsSlider" role="region" aria-label="Customer reviews slider">
+        <div class="reviewsTrack" id="reviewsTrack">
+          <article class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review__text">খুব দ্রুত সার্ভিস পেয়েছি, WhatsApp support অনেক ভালো ছিল।</p>
+            <div class="review__author">Sinath Ahmed Fahad</div>
+          </article>
+
+          <article class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review__text">APEUni প্রিমিয়াম ঠিকভাবে অ্যাক্টিভ হয়েছে, একদম trusted।</p>
+            <div class="review__author">Muktadir</div>
+          </article>
+
+          <article class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review__text">Alfa PTE প্রিমিয়াম সময়মতো ডেলিভারি পেয়েছি।</p>
+            <div class="review__author">Ruhan Chowdhury</div>
+          </article>
+
+          <article class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review__text">কথাবার্তা পরিষ্কার ছিল, সার্ভিসও প্রফেশনাল।</p>
+            <div class="review__author">Mehedi Bhuiyan</div>
+          </article>
+
+          <article class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review__text">Combo offer টা সত্যিই value for money।</p>
+            <div class="review__author">Ayesha Siddika</div>
+          </article>
+
+          <article class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="review__text">প্রথমবার ব্যবহার করলাম, অভিজ্ঞতা খুব ভালো।</p>
+            <div class="review__author">Mohammed Abubokor</div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section--alt">
+    <div class="container">
+      <header class="section__head">
+        <h2 class="section__title">Get In Touch</h2>
+        <p class="section__subtitle">Message us on WhatsApp and we’ll guide you quickly.</p>
+      </header>
+
+      <div class="contact">
+        <div class="contact__panel">
+          <div class="contact__item">
+            <span class="contact__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
+                <path d="M27.4 15.6c0 6.4-5.2 11.6-11.6 11.6-2.1 0-4.1-.5-5.9-1.5L6 27l1.3-3.7c-1-1.8-1.6-3.9-1.6-6 .1-6.4 5.3-11.6 11.7-11.6 6.4 0 11.6 5.2 11.6 11.6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <div>
+              <div class="contact__label">WhatsApp</div>
+              <div class="contact__value">+1 (321) 378-7570</div>
+            </div>
+          </div>
+
+          <div class="contact__item">
+            <span class="contact__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <div>
+              <div class="contact__label">Availability</div>
+              <div class="contact__value">24/7 Support</div>
+            </div>
+          </div>
+
+          <div class="contact__item">
+            <span class="contact__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <div>
+              <div class="contact__label">Delivery</div>
+              <div class="contact__value">Fast & Reliable</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__cta">
+          <h3 class="contact__title">Ready to order?</h3>
+          <p class="contact__text">Message us on WhatsApp and we’ll guide you in minutes.</p>
+          <a class="btn btn--primary btn--xl" href="#" data-wa="Hi! I want to order. Please guide me.">Chat on WhatsApp</a>
+          <p class="contact__hint">Tip: Include the product name & duration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" aria-label="Footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <div class="footer__brand">
+          <span class="brand__mark brand__mark--footer" aria-hidden="true"></span>
+          <span class="footer__name">Authorized Digital Service</span>
+        </div>
+        <p class="footer__text">Premium access with a secure process and responsive support.</p>
+        <a class="btn btn--soft btn--block" href="#" data-wa="Hi! I want to chat on WhatsApp.">Chat on WhatsApp</a>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Quick Links</h4>
+        <a class="footer__link" href="#products">Products</a>
+        <a class="footer__link" href="#combos">Combo Offers</a>
+        <a class="footer__link" href="#reviews">Reviews</a>
+        <a class="footer__link" href="#contact">Contact</a>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Support</h4>
+        <div class="footer__muted">Fast response</div>
+        <div class="footer__muted">Order confirmation</div>
+        <div class="footer__muted">After-delivery help</div>
+        <div class="footer__muted">Friendly guidance</div>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Social</h4>
+        <div class="social">
+          <a class="social__a" href="#" data-wa="Hi! I want to chat." target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 32 32" width="18" height="18" aria-hidden="true">
+              <path fill="currentColor" d="M16 3C9.4 3 4 8.3 4 14.8c0 2.2.6 4.4 1.8 6.3L4 29l8.1-2.1c1.8 1 3.9 1.6 5.9 1.6 6.6 0 12-5.3 12-11.8C30 8.3 22.6 3 16 3z"/>
+            </svg>
+          </a>
+
+          <a class="social__a" href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="currentColor" d="M13 22v-8h3l1-4h-4V7c0-1.1.3-2 2-2h2V1h-3c-3 0-5 2-5 5v4H8v4h3v8h2z"/>
+            </svg>
+          </a>
+
+          <a class="social__a" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z"/>
+            </svg>
+          </a>
+
+          <a class="social__a" href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="currentColor" d="M21.6 3.6L2.9 11.2c-1.3.5-1.3 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.3.6.7.2l2.6-2.5 5.3 3.9c1 .6 1.7.3 1.9-.9l3.2-15.2c.3-1.5-.6-2.2-1.4-1.7z"/>
+            </svg>
+          </a>
+
+          <a class="social__a" href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="currentColor" d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.8 4.6 12 4.6 12 4.6s-5.8 0-7.5.5A3 3 0 0 0 2.4 7.2 31.8 31.8 0 0 0 2 12a31.8 31.8 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.7.5 7.5.5 7.5.5s5.8 0 7.5-.5a3 3 0 0 0 2.1-2.1A31.8 31.8 0 0 0 22 12a31.8 31.8 0 0 0-.4-4.8zM10 15.3V8.7L16 12l-6 3.3z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer__muted footer__note">Open links in new tab</div>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <div class="container footer__barInner">
+        <span>© <span id="year"></span> Authorized Digital Service</span>
+        <span class="footer__muted">Premium digital accounts • Trusted support</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- WhatsApp Floating Button -->
+  <!-- WhatsApp Floating Button -->
+<a class="fab"
+   href="https://wa.me/13213787570?text=Hello!%20I%20want%20to%20purchase%20your%20premium%20subscription.%20Please%20guide%20me."
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat on WhatsApp">
+
+  <!-- OFFICIAL WhatsApp Icon -->
+  <svg xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 32 32"
+       width="24"
+       height="24"
+       aria-hidden="true">
+    <path fill="currentColor" d="M16.02 2.99c-7.19 0-13.03 5.82-13.03 12.98 0 2.29.6 4.53 1.75 6.51L3 29l6.74-1.77a12.94 12.94 0 006.28 1.61h.01c7.19 0 13.03-5.82 13.03-12.98 0-7.16-5.84-12.87-13.03-12.87zm7.56 18.62c-.32.9-1.6 1.67-2.65 1.9-.71.15-1.63.27-4.73-.99-3.97-1.61-6.53-5.62-6.73-5.88-.2-.26-1.61-2.14-1.61-4.09 0-1.95 1.03-2.92 1.39-3.32.36-.4.78-.5 1.03-.5h.74c.24 0 .57-.09.9.68.32.77 1.08 2.66 1.18 2.85.1.2.16.43.03.7-.13.26-.2.43-.39.66-.2.23-.41.51-.58.68-.2.2-.41.41-.18.8.23.39 1.01 1.65 2.17 2.67 1.49 1.32 2.75 1.73 3.14 1.93.39.2.62.17.85-.1.23-.26.98-1.15 1.24-1.54.26-.39.52-.32.87-.19.36.13 2.26 1.06 2.65 1.26.39.2.65.29.75.45.1.16.1.94-.22 1.84z"/>
+  </svg>
+</a>
+
+
+
+
+
+  <script src="main.js"></script>
+</body>
+</html>
