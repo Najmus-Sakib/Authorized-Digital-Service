@@ -457,6 +457,7 @@ strong{ font-weight: 850; }
   overflow:hidden;
   box-shadow: 0 26px 60px rgba(15,23,42,0.12);
 
+  /* 1) Alignment offset (set by JS) — moves card only */
   transform: translate3d(0, var(--heroCardOffset, 0px), 0);
   will-change: transform;
 }
@@ -486,6 +487,7 @@ strong{ font-weight: 850; }
   margin-bottom: 14px;
 }
 
+/* UPDATED: Most Popular pill animation */
 .pill{
   display:inline-flex;
   align-items:center;
@@ -551,52 +553,11 @@ strong{ font-weight: 850; }
   font-size: 19px;
   letter-spacing: -0.2px;
 }
-
-/* ✅ UPDATED: deal meta layout for new/old/save */
 .deal__meta{
-  margin-top: 6px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 10px;
-  color: rgba(100, 116, 139, 0.90);
-  font-size: 14px;
+  margin-top: 4px;
+  font-size: 16px;
+  color: rgba(100, 116, 139, 0.884);
 }
-.deal__term{
-  font-weight: 850;
-  color: rgba(100,116,139,0.95);
-  white-space: nowrap;
-}
-.deal__prices{
-  display:flex;
-  align-items:baseline;
-  gap: 8px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-  text-align:right;
-}
-.deal__new{
-  font-weight: 980;
-  color: rgba(15,23,42,0.92);
-}
-.deal__old{
-  font-size: 12px;
-  font-weight: 900;
-  color: rgba(100,116,139,0.90);
-  text-decoration: line-through;
-}
-.deal__save{
-  display:inline-flex;
-  align-items:center;
-  padding: 3px 8px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 950;
-  background: rgba(245,158,11,0.16);
-  border: 1px solid rgba(245,158,11,0.26);
-  color: rgba(15,23,42,0.90);
-}
-
 .heroCard__cta{ box-shadow: 0 18px 40px rgba(20,184,166,0.20); }
 .heroCard__cta:hover{ box-shadow: 0 22px 48px rgba(20,184,166,0.24); }
 .heroCard__note{
@@ -609,6 +570,7 @@ strong{ font-weight: 850; }
 @media (max-width: 980px){
   .hero__grid{ grid-template-columns: 1fr; }
   .trust{ grid-template-columns: 1fr; }
+  /* no offset on stacked mobile layout */
   .heroCard{ transform: none; }
 }
 
@@ -667,58 +629,18 @@ strong{ font-weight: 850; }
 .card__title{ margin: 0 0 6px; font-size: 18px; letter-spacing: -0.3px; font-weight: 950; }
 .card__desc{ margin: 0; color: rgba(100,116,139,0.98); font-size: 13px; line-height: 1.55; }
 
-/* ===================== Pricing UI ===================== */
+/* Pricing UI */
 .price{ display:grid; gap: 8px; margin-bottom: 12px; }
 .price__row{
   display:flex;
   justify-content:space-between;
-  align-items:flex-start; /* better for 2-line right side */
-  gap: 12px;
+  align-items:center;
   padding: 10px 10px;
   border-radius: 16px;
   background: rgba(247,250,252,0.78);
   border: 1px solid rgba(230,238,246,0.95);
 }
 .price__new{ font-weight: 950; color: rgba(15,23,42,0.92); }
-
-/* ✅ NEW: price stack (new + old + save%) */
-.price__stack{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-end;
-  gap: 4px;
-  text-align:right;
-  line-height: 1.15;
-}
-.price__metaLine{
-  display:flex;
-  align-items:center;
-  gap: 8px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-}
-.price__old{
-  font-size: 12px;
-  font-weight: 900;
-  color: rgba(100,116,139,0.90);
-  text-decoration: line-through;
-}
-.price__save{
-  display:inline-flex;
-  align-items:center;
-  padding: 3px 8px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 950;
-  background: rgba(245,158,11,0.16);
-  border: 1px solid rgba(245,158,11,0.26);
-  color: rgba(15,23,42,0.90);
-}
-
-/* compact pricing (used in combo card) */
-.price--compact{ margin-bottom: 14px; }
-.price--compact .price__row{ padding: 10px 12px; }
-
 .price__hint{ color: rgba(100,116,139,0.98); font-size: 12px; margin-top: 2px; }
 
 /* Combo section list */
@@ -767,7 +689,7 @@ strong{ font-weight: 850; }
 /* ===================== Reviews (auto loop + swipe/drag) ===================== */
 .reviewsSlider{
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* left side hidden */
   border-radius: var(--radius);
 }
 .reviewsTrack{
@@ -777,7 +699,7 @@ strong{ font-weight: 850; }
   will-change: transform;
   cursor: grab;
   user-select: none;
-  touch-action: pan-y;
+  touch-action: pan-y; /* allow vertical page scroll; handle horizontal drag */
 }
 .reviewsTrack:active{ cursor: grabbing; }
 
@@ -939,6 +861,54 @@ strong{ font-weight: 850; }
   .footer__barInner{ flex-direction: column; align-items:flex-start; }
 }
 
+/* FAB */
+/* ===================== WhatsApp FAB — Premium Animation (Replace this block) ===================== */
+.fab{
+  position: fixed;
+  right: clamp(14px, 3vw, 22px);
+  bottom: clamp(14px, 3vw, 22px);
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+
+  background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.28), rgba(255,255,255,0) 55%),
+              linear-gradient(135deg, #22C55E, #16A34A);
+
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border: 1px solid rgba(255,255,255,0.22);
+  box-shadow:
+    0 18px 38px rgba(34,197,94,0.18),
+    0 10px 22px rgba(15,23,42,0.10);
+
+  transition: transform var(--t) var(--ease), box-shadow var(--t) var(--ease), filter var(--t) var(--ease);
+  z-index:80;
+
+  /* premium motion */
+  isolation: isolate;
+  will-change: transform, box-shadow;
+  animation: fabFloat 2.8s ease-in-out infinite;
+}
+
+/* outer glow aura */
+.fab::before{
+  content:"";
+  position:absolute;
+  inset:-12px;
+  border-radius: 22px;
+  background: radial-gradient(circle, rgba(34,197,94,0.32), rgba(34,197,94,0.0) 62%);
+  opacity: 0.55;
+  z-index:-1;
+  filter: blur(1px);
+  pointer-events:none;
+  animation: fabAura 2.8s ease-in-out infinite;
+}
+
+
+
 /* ===================== WhatsApp FAB – Premium & Clear Animation ===================== */
 .fab{
   position: fixed;
@@ -963,10 +933,12 @@ strong{ font-weight: 850; }
   z-index: 80;
   isolation: isolate;
 
+  /* main floating animation */
   animation: fabFloat 2.6s ease-in-out infinite;
   transition: transform 240ms ease, box-shadow 240ms ease;
 }
 
+/* glowing ring */
 .fab::before{
   content:"";
   position:absolute;
@@ -979,6 +951,7 @@ strong{ font-weight: 850; }
   pointer-events:none;
 }
 
+/* ripple pulse */
 .fab::after{
   content:"";
   position:absolute;
@@ -991,6 +964,7 @@ strong{ font-weight: 850; }
   pointer-events:none;
 }
 
+/* ✅ THIS IS THE KEY PART – SVG animation */
 .fab svg{
   width: 22px;
   height: 22px;
@@ -1001,6 +975,7 @@ strong{ font-weight: 850; }
   filter: drop-shadow(0 6px 12px rgba(15,23,42,0.35));
 }
 
+/* hover interaction */
 .fab:hover{
   transform: translateY(-5px) scale(1.04);
   box-shadow:
@@ -1008,25 +983,30 @@ strong{ font-weight: 850; }
     0 14px 30px rgba(15,23,42,0.14);
 }
 
+/* ===================== Keyframes ===================== */
 @keyframes fabFloat{
   0%,100%{ transform: translateY(0); }
   50%{ transform: translateY(-4px); }
 }
+
 @keyframes fabGlow{
   0%,100%{ opacity: .45; transform: scale(.95); }
   50%{ opacity: .75; transform: scale(1.05); }
 }
+
 @keyframes fabRipple{
   0%{ opacity: 0; transform: scale(.9); }
   40%{ opacity: .6; transform: scale(1); }
   70%{ opacity: .15; transform: scale(1.15); }
   100%{ opacity: 0; transform: scale(1.25); }
 }
+
 @keyframes iconPulse{
   0%,100%{ transform: scale(1); }
   50%{ transform: scale(1.12); }
 }
 
+/* mobile fine-tune */
 @media (max-width: 420px){
   .fab{
     width: 54px;
@@ -1215,6 +1195,7 @@ strong{ font-weight: 850; }
   }
 }
 
+/* Disable FAQ animations for reduced motion users */
 @media (prefers-reduced-motion: reduce){
   #faq.faq--reveal .faq__header,
   #faq.faq--reveal .faq__item,
